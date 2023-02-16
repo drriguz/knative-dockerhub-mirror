@@ -1,0 +1,10 @@
+# Tekton
+https://github.com/tektoncd/pipeline/releases/download/v0.44.0/release.yaml 
+https://github.com/tektoncd/triggers/releases/download/v0.22.1/release.yaml
+https://github.com/tektoncd/triggers/releases/download/v0.22.1/interceptors.yaml
+
+# Knative 1.9.0
+https://github.com/knative/serving/releases/download/knative-v1.9.0/serving-core.yaml
+https://github.com/knative/eventing/releases/download/knative-v1.9.0/eventing-core.yaml
+https://github.com/knative/eventing/releases/download/knative-v1.9.0/in-memory-channel.yaml
+https://github.com/knative/eventing/releases/download/knative-v1.9.0/mt-channel-broker.yaml
