@@ -146,9 +146,13 @@ class ReleseFileTransformer:
             yield self.process_release_file_line(text)
 
     def find_image_names(self, line):
-        pattern = r'gcr\.io(?:/[a-z-_\.]+)+(?::v?\d+(?:\.\d+)*)?(?:@sha256:[a-f0-9]{64})?'
+        gcrimages = self.find_image_names_by_prefix(r'gcr\.io', line) 
+        cgrimages = self.find_image_names_by_prefix(r'cgr\.dev', line)
+        return gcrimages + cgrimages
+
+    def find_image_names_by_prefix(self, prefix, line):
+        pattern = prefix + r'(?:/[a-z-_\.]+)+(?::v?\d+(?:\.\d+)*)?(?:@sha256:[a-f0-9]{64})?'
         return re.findall(pattern, line)
-    
     def process_release_file_line(self, text):
         if text.lstrip().rstrip().startswith('#'):
             return text
