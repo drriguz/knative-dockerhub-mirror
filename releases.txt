@@ -10,3 +10,6 @@ https://github.com/knative/eventing/releases/download/knative-v1.9.0/eventing-co
 https://github.com/knative/eventing/releases/download/knative-v1.9.0/in-memory-channel.yaml
 https://github.com/knative/eventing/releases/download/knative-v1.9.0/mt-channel-broker.yaml
 https://github.com/knative-sandbox/net-kourier/releases/download/knative-v1.9.0/kourier.yaml
+
+# HPA
+https://github.com/knative/serving/releases/download/knative-v1.9.0/serving-hpa.yaml
