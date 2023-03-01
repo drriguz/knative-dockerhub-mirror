@@ -13,3 +13,4 @@ https://github.com/knative-sandbox/net-kourier/releases/download/knative-v1.9.0/
 
 # HPA
 https://github.com/knative/serving/releases/download/knative-v1.9.0/serving-hpa.yaml
+https://github.com/knative/net-istio/releases/download/knative-v1.9.1/net-istio.yaml
