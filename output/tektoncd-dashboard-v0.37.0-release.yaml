@@ -146,7 +146,7 @@ rules:
       - taskruns
       - pipelines
       - pipelineruns
-      - runs
+      - customruns
     verbs:
       - get
       - list
@@ -201,7 +201,7 @@ subjects:
 ---
 apiVersion: v1
 data:
-  version: v0.32.0
+  version: v0.37.0
 kind: ConfigMap
 metadata:
   labels:
@@ -219,9 +219,9 @@ metadata:
     app.kubernetes.io/instance: default
     app.kubernetes.io/name: dashboard
     app.kubernetes.io/part-of: tekton-dashboard
-    app.kubernetes.io/version: v0.32.0
-    dashboard.tekton.dev/release: v0.32.0
-    version: v0.32.0
+    app.kubernetes.io/version: v0.37.0
+    dashboard.tekton.dev/release: v0.37.0
+    version: v0.37.0
   name: tekton-dashboard
   namespace: tekton-pipelines
 spec:
@@ -245,9 +245,9 @@ metadata:
     app.kubernetes.io/instance: default
     app.kubernetes.io/name: dashboard
     app.kubernetes.io/part-of: tekton-dashboard
-    app.kubernetes.io/version: v0.32.0
-    dashboard.tekton.dev/release: v0.32.0
-    version: v0.32.0
+    app.kubernetes.io/version: v0.37.0
+    dashboard.tekton.dev/release: v0.37.0
+    version: v0.37.0
   name: tekton-dashboard
   namespace: tekton-pipelines
 spec:
@@ -266,7 +266,7 @@ spec:
         app.kubernetes.io/instance: default
         app.kubernetes.io/name: dashboard
         app.kubernetes.io/part-of: tekton-dashboard
-        app.kubernetes.io/version: v0.32.0
+        app.kubernetes.io/version: v0.37.0
       name: tekton-dashboard
     spec:
       containers:
@@ -286,7 +286,7 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.namespace
-          image: knativecn/gcr.io.tekton-releases.github.com.tektoncd.dashboard.cmd.dashboard:v0.32.0@sha256:39e301ef5d1215cbe7b1822b2afe5095c406b81aaa4e63e6bf23120840f4cd25
+          image: knativecn/gcr.io.tekton-releases.github.com.tektoncd.dashboard.cmd.dashboard:v0.37.0@sha256:14068b1d24c6d98e4fcb10e47ece0ffda136870a23016b24c6d667d999f3f548
           livenessProbe:
             httpGet:
               path: /health
