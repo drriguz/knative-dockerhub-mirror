@@ -85,10 +85,14 @@ class ImageTransformer:
             return self.image_mapping.mapping[gcrimage].full_name
         os.system('docker pull ' + gcrimage)
         image = Image.parse(gcrimage)
+
+        # hack
         new_repository = "knativecn/" +image.name.replace('/', '.')
+        # if new_repository.startswith('knativecn/gcr.io.knative-releases'):
+        #    new_repository = new_repository.replace('gcr.io.knative-releases', 'gcr.io')
         
         if not self.image_mapping.is_repository_exists(new_repository):
-            self.create_dockerhub_repo(gcrimage, new_repository)
+            # self.create_dockerhub_repo(gcrimage, new_repository)
             self.image_mapping.mark_as_existing(new_repository)
         new_image = new_repository
         if image.tag != None:
